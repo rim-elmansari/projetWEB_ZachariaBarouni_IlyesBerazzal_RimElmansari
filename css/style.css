@@ -1,0 +1,15 @@
+/* Styles communs à toutes les pages */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; line-height: 1.5; }
+
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+.main-nav ul { display: flex; gap: 1.5rem; list-style: none; }
+.main-nav a { text-decoration: none; color: inherit; }
+
+.has-submenu { position: relative; }
+.submenu { display: none !important; position: absolute; top: 100%; left: 0; flex-direction: column; gap: 0.5rem; padding: 0.5rem 1rem; background: #fff; }
+.has-submenu:hover .submenu { display: flex !important; }
+
+main { padding: 2rem; }
+.site-footer { padding: 1rem 2rem; text-align: center; }
