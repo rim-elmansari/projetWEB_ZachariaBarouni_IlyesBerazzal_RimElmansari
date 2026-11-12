@@ -6,6 +6,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #1B3161;
+    background-image: url("../images/fond-zir-food.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 
@@ -15,21 +21,36 @@ body {
     justify-content: space-between; 
     align-items: center; 
     padding: 1rem 2rem; 
+    background-color: #ffffff35;
+    border-radius: 999px;
 }
 
 .main-nav ul { 
     display: flex; 
     gap: 1.5rem; 
     list-style: none; 
+    align-items: center;
 }
 
 .main-nav a { 
-    text-decoration: none; 
-    color: inherit; 
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    background-color: #F8E78F;
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
 }
 
-.main-nav a.active { 
-    font-weight: bold; 
+.main-nav a:hover { 
+    background-color: #FFDB1F;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    background-color: #67A483;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 .logo { font-weight: bold; 
@@ -41,28 +62,48 @@ body {
     position: relative; 
 }
 
-.submenu { display: none !important; 
+.main-nav .submenu {
+    display: none;
     position: absolute; 
-    top: 100%; left: 0; 
+    top: 100%; 
+    right: 0; 
     flex-direction: column; 
+    align-items: flex-end;
     gap: 0.5rem; 
-    padding: 0.5rem 1rem; 
-    background: #fff; 
+    padding: 0.5rem 0; 
+    
+    z-index: 10;
 }
 
-.has-submenu:hover .submenu { 
-    display: flex !important; 
+.submenu a {
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.main-nav .has-submenu:hover .submenu {
+    display: flex;
 }
 
 main { 
     padding: 2rem;
     flex: 1;
+    background-color: rgba(255, 255, 255, 0.30);
+    margin: 2rem;
+    border-radius: 20px;
 }
 
 .site-footer { 
     padding: 1rem 2rem; 
     text-align: center; 
-    border-top: 1px solid #ddd;
     font-size: 0.9rem;
     color: #555;
+    background-color: #ffffff55;
+    border-radius: 80px;
+}
+
+
+.contour {
+    border: 2px solid #44ddff;
+    border-radius: 99px;
+    padding: 10px;
 }

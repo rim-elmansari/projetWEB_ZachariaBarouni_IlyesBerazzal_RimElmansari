@@ -5,16 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rejoindre l'équipe | ZIR FOOD</title>
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/rejoindre-equipe.css">
+  <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
   <header class="site-header"></header>
 
   <main>
     <h1>Rejoindre l'équipe</h1>
+
+    <section>
+      <h2>Postes à pourvoir</h2>
+      <ul class="liste-postes">
+        <li class="carte-poste">
+          <h3>Cuisinier(e)</h3>
+          <p>CDI - Temps plein</p>
+        </li>
+        <li class="carte-poste">
+          <h3>Serveur(se)</h3>
+          <p>CDD - Week-ends</p>
+        </li>
+        <li class="carte-poste">
+          <h3>Livreur(se)</h3>
+          <p>Temps partiel</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Postuler</h2>
+      <div class="contour">
+        <div class="chat-box">
+          <div id="messages" class="messages" aria-live="polite"></div>
+          <form id="chat-form" class="input-container">
+            <label for="user-input" class="cache">Votre réponse</label>
+            <input id="user-input" type="text" placeholder="Tapez votre message ici..." autocomplete="off">
+            <button type="submit" id="send-button">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <section>
 
   <footer class="site-footer"></footer>
   <script src="../../js/calque.js"></script>
   <script src="../../js/script.js"></script>
+  <script src="../../js/rejoindre-equipe.js"></script>
 </body>
 </html>
