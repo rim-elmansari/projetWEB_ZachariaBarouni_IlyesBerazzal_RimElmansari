@@ -1,57 +1,266 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rejoindre l'équipe | ZIR FOOD</title>
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/rejoindre-equipe.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rejoindre notre équipe | ZIR FOOD</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/rejoindre-equipe.css">
 </head>
+
 <body>
-  <header class="site-header"></header>
 
-  <main>
-    <h1>Rejoindre l'équipe</h1>
+    
+    <header class="home-header">
 
-    <section>
-      <h2>Postes à pourvoir</h2>
-      <ul class="liste-postes">
-        <li class="carte-poste">
-          <h3>Cuisinier(e)</h3>
-          <p>CDI - Temps plein</p>
-        </li>
-        <li class="carte-poste">
-          <h3>Serveur(se)</h3>
-          <p>CDD - Week-ends</p>
-        </li>
-        <li class="carte-poste">
-          <h3>Livreur(se)</h3>
-          <p>Temps partiel</p>
-        </li>
-      </ul>
-    </section>
+        <a href="../index.html" class="home-logo">
+            <img src="../../images/logo-zir-food.png" alt="Logo ZIR FOOD">
+        </a>
 
-    <section>
-      <h2>Postuler</h2>
-      <div class="contour">
-        <div class="chat-box">
-          <div id="messages" class="messages" aria-live="polite"></div>
-          <form id="chat-form" class="input-container">
-            <label for="user-input" class="cache">Votre réponse</label>
-            <input id="user-input" type="text" placeholder="Tapez votre message ici..." autocomplete="off">
-            <button type="submit" id="send-button">Envoyer</button>
-          </form>
+        <nav class="home-nav">
+            <a href="../index.html">Accueil</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../reservation.html">Réservation</a>
+            <a href="../actu.html">Actus</a>
+
+            <div class="faq-dropdown">
+                <a href="../faq.html" class="faq-toggle">FAQ ▾</a>
+
+                <div class="faq-dropdown-content">
+                    <a href="../faq.html">Questions fréquentes</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="ou-nous-trouver.html">Où nous trouver ?</a>
+                    <a href="rejoindre-equipe.html">Rejoindre l'équipe</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="recrutement-page">
+
+        
+        <section class="recrutement-hero">
+
+            <span class="recrutement-tag">💚 RECRUTEMENT ZIR FOOD</span>
+
+            <h1>
+                ENVIE DE FAIRE PARTIE
+                <span>DE L'AVENTURE ?</span>
+            </h1>
+
+            <p>
+                Chez ZIR FOOD, nous croyons que les meilleures expériences
+                commencent avec une équipe passionnée.
+                Rejoins-nous et participe à une aventure pleine de saveurs !
+            </p>
+
+            <a href="#postes" class="recrutement-button">
+                Découvrir les postes ↓
+            </a>
+
+        </section>
+
+
+        
+        <section class="recrutement-intro">
+
+            <h2>PLUS QU'UN RESTAURANT, <span>UNE ÉQUIPE !</span></h2>
+
+            <p>
+                Tu es motivé(e), dynamique et tu aimes le contact avec les gens ?
+                Nous recherchons de nouveaux talents pour faire grandir
+                l'univers ZIR FOOD.
+            </p>
+
+        </section>
+
+
+        
+        <section class="postes-section" id="postes">
+
+            <div class="recrutement-heading">
+                <span>🚀 NOS OPPORTUNITÉS</span>
+                <h2>LES POSTES <strong>À POURVOIR</strong></h2>
+            </div>
+
+            <ul class="liste-postes">
+
+                <li class="carte-poste">
+                    <div class="poste-icon">👨‍🍳</div>
+
+                    <span class="poste-type">RESTAURATION</span>
+
+                    <h3>Cuisinier(e)</h3>
+
+                    <p class="poste-contrat">CDI · Temps plein</p>
+
+                    <p class="poste-description">
+                        Prépare nos spécialités, participe à la création
+                        de plats savoureux et veille à la qualité de nos recettes.
+                    </p>
+
+                    <a href="#postuler" class="poste-button">
+                        Postuler →
+                    </a>
+                </li>
+
+
+                <li class="carte-poste">
+                    <div class="poste-icon">🧑‍🍽️</div>
+
+                    <span class="poste-type">SERVICE CLIENT</span>
+
+                    <h3>Serveur(se)</h3>
+
+                    <p class="poste-contrat">CDD · Week-ends</p>
+
+                    <p class="poste-description">
+                        Accueille les clients, prends les commandes et
+                        contribues à leur faire passer un agréable moment.
+                    </p>
+
+                    <a href="#postuler" class="poste-button">
+                        Postuler →
+                    </a>
+                </li>
+
+
+                <li class="carte-poste">
+                    <div class="poste-icon">🛵</div>
+
+                    <span class="poste-type">LIVRAISON</span>
+
+                    <h3>Livreur(se)</h3>
+
+                    <p class="poste-contrat">Temps partiel</p>
+
+                    <p class="poste-description">
+                        Assure la livraison des commandes et représente
+                        ZIR FOOD auprès de nos clients.
+                    </p>
+
+                    <a href="#postuler" class="poste-button">
+                        Postuler →
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        
+        <section class="postuler-section" id="postuler">
+
+            <div class="recrutement-heading">
+                <span>💬 ON FAIT CONNAISSANCE ?</span>
+                <h2>TA CANDIDATURE <strong>COMMENCE ICI</strong></h2>
+            </div>
+
+            <p class="postuler-intro">
+                Réponds aux questions de notre assistant pour nous présenter
+                ta candidature. Cela ne prend que quelques minutes !
+            </p>
+
+            <div class="contour">
+
+                <div class="chat-header">
+                    <div class="chat-avatar">🌯</div>
+
+                    <div>
+                        <h3>Assistant ZIR FOOD</h3>
+                        <p><span class="online-dot"></span> Prêt à discuter</p>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+
+                    <div id="messages" class="messages" aria-live="polite">
+
+                        <div class="message bot-message">
+                            Bienvenue chez ZIR FOOD ! 👋
+                            <br><br>
+                            Je suis là pour recueillir ta candidature.
+                            Pour commencer, présente-toi !
+                        </div>
+
+                    </div>
+
+                    <form id="chat-form" class="input-container">
+
+                        <label for="user-input" class="cache">
+                            Votre réponse
+                        </label>
+
+                        <input
+                            id="user-input"
+                            type="text"
+                            placeholder="Tape ta réponse ici..."
+                            autocomplete="off"
+                            required
+                        >
+
+                        <button type="submit" id="send-button">
+                            Envoyer ➤
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <p class="chat-note">
+                    🔒 Tes réponses sont destinées au traitement de ta candidature.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="recrutement-banner">
+
+            <span>💛 TON AVENTURE COMMENCE ICI</span>
+
+            <h2>ET SI TU ÉTAIS NOTRE PROCHAIN TALENT ?</h2>
+
+            <p>
+                Nous avons hâte de découvrir ton profil !
+            </p>
+
+            <a href="#postuler" class="recrutement-button">
+                Je candidate maintenant
+            </a>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer class="home-footer">
+
+        <p>© 2026 ZIR FOOD — Tous droits réservés.</p>
+
+        <div class="footer-links">
+            <a href="../index.html">Accueil</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
         </div>
-      </div>
-    </section>
 
-  </main>
+    </footer>
 
-  <section>
 
-  <footer class="site-footer"></footer>
-  <script src="../../js/calque.js"></script>
-  <script src="../../js/script.js"></script>
-  <script src="../../js/rejoindre-equipe.js"></script>
+    
+    <script src="../../js/calque.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/rejoindre-equipe.js"></script>
+
 </body>
 </html>

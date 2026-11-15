@@ -1,20 +1,394 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu | ZIR FOOD</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | ZIR FOOD</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <script src="../js/menu.js" defer></script>
 </head>
+
 <body>
-  <header class="site-header"></header>
 
-  <main>
-    <h1>Menu</h1>
-  </main>
+<!-- =================================
+     HEADER IDENTIQUE À LA FAQ
+================================= -->
 
-  <footer class="site-footer"></footer>
-  <script src="../js/calque.js"></script>
-  <script src="../js/script.js"></script>
+
+<header class="home-header">
+
+    <a href="index.html" class="home-logo">
+        <img src="../images/logo-zir-food.png" alt="Logo ZIR FOOD">
+    </a>
+
+    <nav class="home-nav">
+
+        <a href="index.html">Accueil</a>
+
+        <a href="menu.html" class="active">Menu</a>
+
+        <a href="reservation.html">Réservation</a>
+
+        <a href="actu.html">Actus</a>
+
+        <div class="faq-dropdown">
+            <a href="faq.html" class="faq-toggle">
+                FAQ
+            </a>
+
+            <div class="faq-dropdown-content">
+                <a href="faq.html">Questions fréquentes</a>
+                <a href="faq/contact.html">Contact</a>
+                <a href="faq/ou-nous-trouver.html">Où nous trouver ?</a>
+                <a href="faq/rejoindre-equipe.html">Rejoindre l'équipe</a>
+            </div>
+        </div>
+
+    </nav>
+
+</header>
+
+
+ 
+
+    <main class="zir-menu">
+
+        
+
+        <section class="menu-hero">
+
+            <span class="menu-tag">LE GOÛT DU MOYEN-ORIENT</span>
+
+            <h1>
+                DÉCOUVREZ NOTRE
+                <span>MENU</span>
+            </h1>
+
+            <p>
+                Des recettes généreuses, des ingrédients savoureux
+                et une cuisine pleine de caractère.
+                Chez ZIR FOOD, chaque bouchée est une expérience !
+            </p>
+
+        </section>
+
+
+        
+
+        <section class="menu-banner">
+
+            <span>🌯 FRAÎCHEUR</span>
+            <span>🔥 GÉNÉROSITÉ</span>
+            <span>🥙 AUTHENTICITÉ</span>
+            <span>💚 QUALITÉ</span>
+
+        </section>
+
+
+        
+
+        <section class="menu-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">NOS SPÉCIALITÉS</span>
+
+                <h2>
+                    UN MENU QUI A DU
+                    <span>CARACTÈRE !</span>
+                </h2>
+
+                <p>
+                    Choisissez votre envie du moment parmi nos spécialités.
+                </p>
+
+            </div>
+
+
+            
+
+            <div class="menu-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    Tout
+                </button>
+
+                <button class="filter-btn" data-filter="box">
+                    Nos Boxes
+                </button>
+
+                <button class="filter-btn" data-filter="shawarma">
+                    Shawarmas
+                </button>
+
+                <button class="filter-btn" data-filter="mezze">
+                    Mezze
+                </button>
+
+                <button class="filter-btn" data-filter="falafel">
+                    Falafels
+                </button>
+
+            </div>
+
+
+            
+
+            <div class="menu-grid">
+
+
+                
+
+                <article class="food-card" data-category="box">
+
+                    <span class="food-label">BEST-SELLER</span>
+
+                    <img
+                        src="../images/box.jpg"
+                        alt="ZIR Box Original"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>ZIR BOX ORIGINAL</h3>
+
+                        <p>
+                            Une box généreuse composée de spécialités
+                            orientales, accompagnements et sauce maison.
+                        </p>
+
+                        <span class="food-price">11,90 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter la ZIR Box Original">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                
+
+                <article class="food-card" data-category="box">
+
+                    <span class="food-label">SPICY</span>
+
+                    <img
+                        src="../images/hot.jpg"
+                        alt="ZIR Spicy Box"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>ZIR SPICY BOX</h3>
+
+                        <p>
+                            Une box relevée et savoureuse pour les amateurs
+                            de sensations épicées.
+                        </p>
+
+                        <span class="food-price">12,90 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter la ZIR Spicy Box">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                
+
+                <article class="food-card" data-category="shawarma">
+
+                    <img
+                        src="../images/sandwich.jpeg"
+                        alt="Shawarma poulet"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>SHAWARMA POULET</h3>
+
+                        <p>
+                            Un pain garni de poulet savoureux,
+                            de légumes frais et de notre sauce maison.
+                        </p>
+
+                        <span class="food-price">8,50 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter le Shawarma Poulet">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                
+
+                <article class="food-card" data-category="shawarma">
+
+                    <span class="food-label">GOURMAND</span>
+
+                    <img
+                        src="../images/spicy.jpg"
+                        alt="Shawarma gourmand"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>SHAWARMA GOURMAND</h3>
+
+                        <p>
+                            Une recette généreuse avec une garniture
+                            savoureuse et des ingrédients frais.
+                        </p>
+
+                        <span class="food-price">9,50 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter le Shawarma Gourmand">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                
+
+                <article class="food-card" data-category="mezze">
+
+                    <img
+                        src="../images/mezze.jpg"
+                        alt="Mezze Mix"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>MEZZE MIX</h3>
+
+                        <p>
+                            Un assortiment de mezzés aux saveurs
+                            orientales à partager ou à déguster seul.
+                        </p>
+
+                        <span class="food-price">10,90 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter le Mezze Mix">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+               
+
+                <article class="food-card" data-category="falafel">
+
+                    <span class="food-label">VÉGÉTARIEN</span>
+
+                    <img
+                        src="../images/falafel.jpg"
+                        alt="Falafel Box"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>FALAFEL BOX</h3>
+
+                        <p>
+                            De délicieux falafels accompagnés
+                            de légumes frais et de sauce maison.
+                        </p>
+
+                        <span class="food-price">10,50 €</span>
+
+                        <button class="add-food" type="button"
+                            aria-label="Ajouter la Falafel Box">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        
+
+        <section class="menu-cta">
+
+            <span class="section-label">ENVIE DE VOUS RÉGALER ?</span>
+
+            <h2>VOTRE PROCHAINE PAUSE GOURMANDE EST CHEZ ZIR FOOD !</h2>
+
+            <p>
+                Retrouvez nos spécialités et préparez votre prochaine visite.
+            </p>
+
+            <a href="reservation.html">
+                Réserver maintenant
+            </a>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <div class="selection-counter" aria-live="polite">
+        Ma sélection :
+        <span id="counterNumber">0</span>
+    </div>
+
+
+    
+
+    <footer class="home-footer">
+
+        <div class="footer-logo">
+            ZIR <span>FOOD</span>
+        </div>
+
+        <p>
+            Des saveurs généreuses, une expérience unique.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="faq.html">FAQ</a>
+            <a href="faq/contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 ZIR FOOD - Tous droits réservés.
+        </div>
+
+    </footer>
+
 </body>
 </html>

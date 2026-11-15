@@ -1,0 +1,447 @@
+
+/* =========================================
+   ZIR FOOD — FAQ
+   Identité visuelle globale du site
+========================================= */
+
+/* CONTENEUR */
+
+.faq-page {
+    padding: 35px 4%;
+    color: white;
+    overflow: hidden;
+}
+
+.faq-page * {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.faq-hero {
+    position: relative;
+    min-height: 360px;
+    margin: 25px 0 65px;
+    padding: 70px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background: linear-gradient(
+        120deg,
+        rgba(18,60,255,0.8),
+        rgba(170,190,220,0.3)
+    );
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+}
+
+.faq-hero::after {
+    content: "?";
+    position: absolute;
+    right: 4%;
+    bottom: -130px;
+    font-size: 350px;
+    font-weight: 1000;
+    color: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+
+.faq-tag {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    z-index: 1;
+}
+
+.faq-hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 25px 0;
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.1;
+    font-weight: 1000;
+    color: white;
+}
+
+.faq-hero h1 span {
+    display: block;
+    color: var(--orange);
+}
+
+.faq-hero p {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: white;
+}
+
+.faq-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 15px 27px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.faq-button:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   TITRES
+========================================= */
+
+.faq-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-heading > span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.faq-heading h2 {
+    margin: 15px 0;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 1000;
+    color: white;
+}
+
+.faq-heading h2 strong {
+    color: var(--orange);
+}
+
+.faq-heading p {
+    color: white;
+    line-height: 1.7;
+}
+
+/* =========================================
+   QUESTIONS FRÉQUENTES
+========================================= */
+
+.faq-section {
+    margin: 65px auto;
+    max-width: 1000px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 18px;
+    background: rgba(170,190,220,0.3);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: var(--yellow);
+    background: rgba(200,215,235,0.4);
+    transform: translateX(4px);
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 23px 65px 23px 25px;
+    cursor: pointer;
+    list-style: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: #172033;
+    font-size: 23px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.faq-item[open] summary {
+    color: var(--yellow);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+    background: var(--orange);
+    color: white;
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 25px 25px;
+    color: white;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   CARTES DES RUBRIQUES
+========================================= */
+
+.faq-categories {
+    margin: 80px 0;
+}
+
+.faq-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.faq-card {
+    position: relative;
+    min-height: 260px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: rgba(200,215,235,0.32);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 23px;
+    transition: 0.3s;
+}
+
+.faq-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--yellow);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.faq-card-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    background: var(--orange);
+    font-size: 26px;
+}
+
+.faq-card:nth-child(2) .faq-card-icon {
+    background: var(--green);
+}
+
+.faq-card:nth-child(3) .faq-card-icon {
+    background: var(--blue);
+}
+
+.faq-card h3 {
+    margin: 22px 0 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.faq-card p {
+    flex-grow: 1;
+    margin: 0 0 22px;
+    color: white;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.faq-card a {
+    display: inline-block;
+    padding: 11px 19px;
+    border-radius: 25px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.faq-card a:hover {
+    background: var(--orange);
+    color: white;
+}
+
+/* =========================================
+   BANNIÈRE FINALE
+========================================= */
+
+.faq-banner {
+    margin: 70px 0 35px;
+    padding: 55px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    background: var(--blue);
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.faq-banner span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.faq-banner h2 {
+    margin: 15px 0;
+    color: white;
+    font-size: clamp(27px, 4vw, 43px);
+    font-weight: 1000;
+}
+
+.faq-banner p {
+    color: white;
+    line-height: 1.7;
+}
+
+.faq-banner a {
+    display: inline-block;
+    padding: 16px 25px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.faq-banner a:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   MENU DÉROULANT FAQ AU PREMIER PLAN
+========================================= */
+
+.home-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.faq-dropdown {
+    position: relative;
+    z-index: 1001;
+}
+
+.faq-dropdown-content {
+    position: absolute;
+    z-index: 1002;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+    .faq-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .faq-page {
+        padding: 20px 12px;
+    }
+
+    .faq-hero {
+        min-height: 320px;
+        margin: 15px 0 40px;
+        padding: 45px 20px;
+    }
+
+    .faq-hero h1 {
+        font-size: 37px;
+    }
+
+    .faq-hero p {
+        font-size: 15px;
+    }
+
+    .faq-section {
+        margin: 45px auto;
+    }
+
+    .faq-item summary {
+        padding: 20px 55px 20px 18px;
+        font-size: 15px;
+    }
+
+    .faq-item p {
+        padding: 0 18px 20px;
+        font-size: 14px;
+    }
+
+    .faq-categories {
+        margin: 55px 0;
+    }
+
+    .faq-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .faq-card {
+        min-height: 220px;
+    }
+
+    .faq-banner {
+        margin: 45px 0 25px;
+        padding: 35px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faq-banner a {
+        width: 100%;
+        text-align: center;
+    }
+}

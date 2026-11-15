@@ -1,0 +1,551 @@
+
+/* ==========================================
+   ZIR FOOD - OU NOUS TROUVER
+   DESIGN BLEU ELECTRIQUE / ORANGE / JAUNE / VERT
+========================================== */
+
+/* PAGE GENERALE */
+
+.location-page {
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.location-page * {
+    box-sizing: border-box;
+}
+
+.location-page h1,
+.location-page h2,
+.location-page h3,
+.location-page p {
+    margin-top: 0;
+}
+
+
+/* ==========================================
+   HERO / BANNIERE
+========================================== */
+
+.location-hero {
+    position: relative;
+    z-index: 1;
+    margin: 45px auto 75px;
+    width: 90%;
+    max-width: 1250px;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 65px 30px;
+
+    background:
+        linear-gradient(135deg,
+        rgba(18, 60, 255, 0.65),
+        rgba(16, 45, 89, 0.92)),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(255,255,255,0.035) 21px,
+            transparent 22px
+        );
+
+    border: 2px solid rgba(80, 130, 255, 0.8);
+    border-radius: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.3),
+        0 0 30px rgba(18,60,255,0.2);
+}
+
+.location-hero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #f45116;
+    filter: blur(100px);
+    opacity: 0.35;
+    top: -50px;
+    right: -30px;
+    pointer-events: none;
+}
+
+.location-tag {
+    display: inline-block;
+    padding: 11px 22px;
+    margin-bottom: 25px;
+
+    background: #ffe68a;
+    color: #102d59;
+
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.location-hero h1 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: 1.08;
+    font-weight: 1000;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.location-hero h1 span {
+    display: block;
+    color: #ffe68a;
+    text-shadow: 0 4px 20px rgba(255,230,138,0.2);
+}
+
+.location-hero p {
+    max-width: 650px;
+    color: #e5edff;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.location-button {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    padding: 16px 30px;
+
+    background: #f45116;
+    color: #ffffff;
+
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 15px;
+
+    box-shadow: 0 7px 0 #a72f08;
+    transition: 0.25s ease;
+}
+
+.location-button:hover {
+    background: #ff713c;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 0 #a72f08;
+}
+
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.location-intro {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.location-intro h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+
+.location-intro h2 span {
+    color: #ffe68a;
+}
+
+.location-intro p {
+    color: #dce6ff;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   SECTION RESTAURANTS
+========================================== */
+
+.location-section {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto 85px;
+}
+
+.location-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.location-heading > span {
+    display: inline-block;
+    color: #ffe68a;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.location-heading h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 1000;
+    line-height: 1.2;
+}
+
+.location-heading h2 strong {
+    color: #f45116;
+}
+
+
+/* ==========================================
+   GRILLE DES CARTES
+========================================== */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+
+/* ==========================================
+   CARTES RESTAURANTS
+========================================== */
+
+.location-card {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 385px;
+    padding: 30px;
+
+    background: rgba(170, 190, 220, 0.32);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 28px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.location-card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #123cff;
+    filter: blur(90px);
+    opacity: 0.35;
+    right: -60px;
+    bottom: -60px;
+    pointer-events: none;
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    background: rgba(190, 210, 240, 0.43);
+    border-color: #ffe68a;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+
+/* HAUT DE CARTE */
+
+.location-card-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.location-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 13px;
+    background: #ffe68a;
+    color: #102d59;
+
+    font-size: 17px;
+    font-weight: 1000;
+}
+
+.location-city {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+
+/* ICONES */
+
+.location-icon {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(18,60,255,0.65);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+
+/* TITRES ET TEXTES */
+
+.location-card h3 {
+    color: #ffe68a;
+    font-size: 27px;
+    font-weight: 1000;
+    margin-bottom: 14px;
+}
+
+.location-address {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.location-description {
+    color: #e2eaff;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* BOUTON ITINERAIRE */
+
+.location-link {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+    margin-top: auto;
+
+    padding: 12px 20px;
+
+    background: #087a38;
+    color: #ffffff;
+
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+
+    transition: 0.25s ease;
+}
+
+.location-link:hover {
+    background: #0ba64c;
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   CARTE VILLEJUIF MISE EN AVANT
+========================================== */
+
+.location-card-highlight {
+    border: 2px solid #ffe68a;
+    background: rgba(8, 122, 56, 0.35);
+}
+
+.location-card-highlight .location-number {
+    background: #087a38;
+    color: #ffffff;
+}
+
+.location-card-highlight .location-icon {
+    background: rgba(8,122,56,0.75);
+}
+
+.location-card-highlight:hover {
+    border-color: #ffffff;
+}
+
+
+/* ==========================================
+   BANNIERE FINALE
+========================================== */
+
+.location-banner {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(120deg,
+        rgba(244,81,22,0.95),
+        rgba(255,153,30,0.9));
+
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 32px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.location-banner > span {
+    display: inline-block;
+    color: #102d59;
+    font-weight: 1000;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.location-banner h2 {
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 1000;
+    margin-bottom: 15px;
+}
+
+.location-banner p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.location-banner .location-button {
+    background: #102d59;
+    color: #ffffff;
+    box-shadow: 0 7px 0 #071a36;
+}
+
+.location-banner .location-button:hover {
+    background: #123cff;
+    box-shadow: 0 12px 0 #071a36;
+}
+
+
+/* ==========================================
+   MENU DEROULANT FAQ
+========================================== */
+
+.home-header {
+    position: relative;
+    z-index: 9999;
+}
+
+.faq-dropdown {
+    position: relative;
+    z-index: 10000;
+}
+
+.faq-dropdown-content {
+    position: absolute;
+    z-index: 10001;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLETTE
+========================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .location-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .location-hero {
+        min-height: 350px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media screen and (max-width: 650px) {
+
+    .location-hero {
+        width: 92%;
+        margin: 25px auto 55px;
+        padding: 50px 20px;
+        border-radius: 25px;
+    }
+
+    .location-hero h1 {
+        font-size: 38px;
+    }
+
+    .location-hero p {
+        font-size: 14px;
+    }
+
+    .location-intro {
+        width: 90%;
+        margin-bottom: 55px;
+    }
+
+    .location-section {
+        width: 92%;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .location-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .location-banner {
+        width: 92%;
+        padding: 45px 20px;
+        border-radius: 25px;
+    }
+
+    .location-banner h2 {
+        font-size: 29px;
+    }
+
+}

@@ -1,0 +1,450 @@
+
+/* =====================================
+   ZIR FOOD - PAGE MENU
+   Identité visuelle de l'accueil
+===================================== */
+
+/* CONTENEUR PRINCIPAL */
+
+.zir-menu {
+    padding: 35px 3%;
+    color: var(--white);
+}
+
+/* HERO DU MENU */
+
+.menu-hero {
+    margin: 30px 0;
+    padding: 65px 5%;
+    min-height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 28px;
+}
+
+.menu-hero h1 {
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.1;
+    margin: 20px 0;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.menu-hero h1 span {
+    color: var(--orange);
+}
+
+.menu-hero p {
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.menu-tag,
+.hero-label {
+    color: var(--yellow);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+/* BANDEAU */
+
+.menu-banner {
+    padding: 24px;
+    background: var(--blue);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* TITRES DE SECTION */
+
+.menu-section {
+    margin: 35px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin: 18px 0;
+    font-weight: 900;
+}
+
+.section-heading h2 span {
+    color: var(--orange);
+}
+
+.section-heading p {
+    line-height: 1.7;
+}
+
+/* FILTRES */
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 35px 0;
+}
+
+.filter-btn {
+    padding: 13px 23px;
+    border: none;
+    border-radius: 30px;
+    background: var(--yellow);
+    color: #172033;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.filter-btn.active {
+    background: var(--green);
+    color: white;
+}
+
+/* GRILLE DES PLATS */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+}
+
+/* CARTES DES PRODUITS */
+
+.food-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(200,215,235,0.35);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--yellow);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.food-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.food-card:hover img {
+    transform: scale(1.04);
+}
+
+/* INFORMATIONS DU PRODUIT */
+
+.food-info {
+    padding: 23px;
+}
+
+.food-info h2,
+.food-info h3 {
+    margin: 12px 0;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+}
+
+.food-info p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: white;
+}
+
+/* PRIX */
+
+.food-price {
+    display: inline-block;
+    color: var(--yellow);
+    font-size: 23px;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+/* BADGES DES PRODUITS */
+
+.food-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: var(--orange);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* BOUTON AJOUTER */
+
+.add-food {
+    float: right;
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-food:hover {
+    background: var(--orange);
+    transform: scale(1.12);
+}
+
+.add-food.selected {
+    background: var(--blue);
+}
+
+/* PRODUITS MASQUÉS PAR LES FILTRES */
+
+.food-card.hidden {
+    display: none;
+}
+
+/* COMPTEUR DE SÉLECTION */
+
+.selection-counter {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100;
+    padding: 16px 22px;
+    border-radius: 25px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+#counterNumber {
+    color: var(--orange);
+    font-size: 20px;
+}
+
+/* APPEL À L'ACTION */
+
+.menu-cta {
+    margin: 35px 0;
+    padding: 70px 20px;
+    text-align: center;
+    background: var(--blue);
+    border-radius: 28px;
+}
+
+.menu-cta h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+.menu-cta p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.menu-cta a {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu-cta a:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .zir-menu {
+        padding: 20px 12px;
+    }
+
+    .menu-hero {
+        padding: 40px 22px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card img {
+        height: 230px;
+    }
+
+    .menu-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .selection-counter {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .menu-cta {
+        padding: 50px 20px;
+    }
+}
+
+/* =====================================
+   CORRECTION COULEURS MENU
+===================================== */
+
+body {
+    background-color: #102d59 !important;
+    background-image:
+        linear-gradient(90deg, transparent 97%, #204bff 97%),
+        linear-gradient(0deg, transparent 97%, #204bff 97%) !important;
+    background-size: 180px 180px !important;
+    background-attachment: fixed !important;
+    color: white !important;
+}
+
+/* Fond des grandes sections */
+.zir-menu,
+.menu-section {
+    background: transparent !important;
+    color: white !important;
+}
+
+/* Panneaux */
+.menu-hero,
+.menu-intro,
+.menu-cta {
+    background: rgba(170, 190, 220, 0.32) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 28px;
+}
+
+/* Cartes */
+.food-card {
+    background: rgba(200, 215, 235, 0.35) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 22px;
+}
+
+/* Textes */
+.zir-menu h1,
+.zir-menu h2,
+.zir-menu h3,
+.zir-menu p {
+    color: white;
+}
+
+.zir-menu h1 span,
+.zir-menu h2 span {
+    color: #f45116 !important;
+}
+
+/* Prix */
+.food-price {
+    color: #ffe68a !important;
+}
+
+/* Boutons */
+.filter-btn {
+    background: #ffe68a !important;
+    color: #172033 !important;
+}
+
+.filter-btn.active {
+    background: #087a38 !important;
+    color: white !important;
+}
+
+.add-food {
+    background: #087a38 !important;
+    color: white !important;
+}
+
+.menu-cta {
+    background: #123cff !important;
+}
+
+.menu-cta a {
+    background: #ffe68a !important;
+    color: #172033 !important;
+}
+
+/* Bandeau */
+.menu-banner {
+    background: #123cff !important;
+    color: white !important;
+}
+
+/* CORRECTION MENU DÉROULANT FAQ */
+
+.home-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.faq-dropdown {
+    position: relative;
+    z-index: 1001;
+}
+
+.faq-dropdown-content {
+    position: absolute;
+    z-index: 1002;
+}

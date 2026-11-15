@@ -1,0 +1,551 @@
+
+/* =========================================
+   ZIR FOOD — ACTUS / CULTURE
+   Identité visuelle assortie à ACCUEIL + MENU
+========================================= */
+
+/* BASE */
+
+.actu-page {
+    width: 100%;
+    padding: 35px 4%;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.actu-page * {
+    box-sizing: border-box;
+}
+
+.actu-page h1,
+.actu-page h2,
+.actu-page h3,
+.actu-page p {
+    color: white;
+}
+
+.actu-page p {
+    line-height: 1.85;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.actu-hero {
+    position: relative;
+    min-height: 390px;
+    margin: 25px 0 65px;
+    padding: 75px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(120deg,
+        rgba(18,60,255,0.75),
+        rgba(170,190,220,0.28));
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.actu-hero::before {
+    content: "ZIR";
+    position: absolute;
+    right: -20px;
+    bottom: -90px;
+    font-size: clamp(150px, 25vw, 300px);
+    font-weight: 1000;
+    color: rgba(255,255,255,0.045);
+    pointer-events: none;
+}
+
+.actu-tag {
+    position: relative;
+    z-index: 1;
+    color: var(--yellow);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.actu-hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 950px;
+    margin: 25px 0;
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: 1.08;
+    font-weight: 1000;
+    letter-spacing: -2px;
+}
+
+.actu-hero h1 span {
+    color: var(--orange);
+    display: block;
+}
+
+.actu-hero p {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.actu-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 16px 28px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.actu-button:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   SECTIONS HISTORIQUES
+========================================= */
+
+.history-section {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: stretch;
+    gap: 40px;
+    margin: 65px 0;
+    padding: 28px;
+
+    background: rgba(170,190,220,0.27);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 28px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.history-section:hover {
+    border-color: var(--yellow);
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+
+.history-image {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: rgba(0,0,0,0.2);
+}
+
+.history-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.history-section:hover .history-image img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 15px;
+    border-radius: 13px;
+    background: rgba(10,25,55,0.82);
+    color: var(--yellow);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+/* TEXTE */
+
+.history-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 12px;
+}
+
+.history-number {
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 15px;
+    padding: 9px 15px;
+    border-radius: 25px;
+    background: var(--orange);
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.history-text h2 {
+    margin: 5px 0 22px;
+    font-size: clamp(27px, 3vw, 39px);
+    line-height: 1.15;
+    font-weight: 1000;
+}
+
+.history-text h2 strong {
+    color: var(--yellow);
+}
+
+.history-text p {
+    margin: 0 0 15px;
+    font-size: 15px;
+}
+
+/* LE SAVAIS-TU */
+
+.history-highlight {
+    margin-top: 15px;
+    padding: 20px;
+    border-left: 5px solid var(--yellow);
+    border-radius: 0 16px 16px 0;
+    background: rgba(255,230,138,0.16);
+    color: white;
+    line-height: 1.7;
+}
+
+.history-highlight span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+
+.green-highlight {
+    border-left-color: #25c76b;
+    background: rgba(8,122,56,0.25);
+}
+
+.green-highlight span {
+    color: #7dffad;
+}
+
+.orange-highlight {
+    border-left-color: var(--orange);
+    background: rgba(244,81,22,0.2);
+}
+
+.orange-highlight span {
+    color: #ff9b70;
+}
+
+/* INVERSION DE LA SECTION FALAFEL */
+
+.history-section.reverse .history-image {
+    order: 2;
+}
+
+.history-section.reverse .history-text {
+    order: 1;
+}
+
+/* =========================================
+   FRISE HISTORIQUE
+========================================= */
+
+.history-timeline {
+    margin: 75px 0;
+    padding: 60px 5%;
+    border-radius: 30px;
+    background: var(--blue);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.timeline-title {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.timeline-title span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.timeline-title h2 {
+    margin: 15px 0;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 1000;
+}
+
+.timeline-title h2 strong {
+    color: var(--orange);
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.13);
+    transition: 0.3s;
+}
+
+.timeline-item:hover {
+    background: rgba(255,255,255,0.23);
+    transform: translateY(-7px);
+}
+
+.timeline-date {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 9px 13px;
+    border-radius: 20px;
+    background: var(--yellow);
+    color: #172033;
+    font-size: 11px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.timeline-item h3 {
+    margin: 0 0 13px;
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.timeline-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* =========================================
+   BANNIÈRE FINALE
+========================================= */
+
+.actu-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 75px 0 35px;
+    padding: 55px 6%;
+    overflow: hidden;
+
+    background: linear-gradient(120deg, #123cff, #174bdb);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 28px;
+}
+
+.actu-banner span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.actu-banner h2 {
+    max-width: 650px;
+    margin: 15px 0;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+    font-weight: 1000;
+}
+
+.actu-banner p {
+    margin: 0;
+}
+
+.actu-banner a {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 17px 25px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.actu-banner a:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+    text-align: center;
+}
+
+.home-footer .footer-logo {
+    width: 90px;
+    max-width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIVE TABLETTE
+========================================= */
+
+@media (max-width: 950px) {
+    .history-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .history-image,
+    .history-image img {
+        min-height: 350px;
+        max-height: 430px;
+    }
+
+    .history-section.reverse .history-image,
+    .history-section.reverse .history-text {
+        order: initial;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        padding: 25px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .actu-page {
+        padding: 18px 12px;
+    }
+
+    .actu-hero {
+        min-height: 350px;
+        margin: 15px 0 40px;
+        padding: 45px 20px;
+    }
+
+    .actu-hero h1 {
+        font-size: 39px;
+        letter-spacing: -1px;
+    }
+
+    .actu-hero p {
+        font-size: 15px;
+    }
+
+    .history-section {
+        margin: 40px 0;
+        padding: 15px;
+        gap: 20px;
+        border-radius: 22px;
+    }
+
+    .history-image,
+    .history-image img {
+        min-height: 260px;
+        max-height: 300px;
+    }
+
+    .history-text {
+        padding: 8px 5px;
+    }
+
+    .history-text h2 {
+        font-size: 27px;
+    }
+
+    .history-text p {
+        font-size: 14px;
+    }
+
+    .history-timeline {
+        margin: 45px 0;
+        padding: 40px 18px;
+    }
+
+    .timeline-title h2 {
+        font-size: 30px;
+    }
+
+    .actu-banner {
+        margin: 45px 0 25px;
+        padding: 38px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actu-banner h2 {
+        font-size: 31px;
+    }
+
+    .actu-banner a {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* CORRECTION MENU DÉROULANT FAQ */
+
+.home-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.faq-dropdown {
+    position: relative;
+    z-index: 1001;
+}
+
+.faq-dropdown-content {
+    position: absolute;
+    z-index: 1002;
+}
+
+/* Les sections ne doivent pas passer devant le menu */
+.actu-page,
+.actu-hero,
+.history-section,
+.history-timeline,
+.actu-banner {
+    position: relative;
+    z-index: 1;
+}

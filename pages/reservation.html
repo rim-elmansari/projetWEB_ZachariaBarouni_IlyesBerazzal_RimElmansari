@@ -1,20 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Réservation | ZIR FOOD</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Réservation | ZIR FOOD</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reservation.css">
+
+    <script src="../js/reservation.js" defer></script>
 </head>
+
 <body>
-  <header class="site-header"></header>
 
-  <main>
-    <h1>Réservation</h1>
-  </main>
 
-  <footer class="site-footer"></footer>
-  <script src="../js/calque.js"></script>
-  <script src="../js/script.js"></script>
+    <header class="home-header">
+
+        <a href="index.html" class="home-logo">
+            <img src="../images/logo-zir-food.png" alt="Logo ZIR FOOD">
+        </a>
+
+        <nav class="home-nav">
+
+            <a href="index.html">Accueil</a>
+
+            <a href="menu.html">Menu</a>
+
+            <a href="reservation.html" class="active">Réservation</a>
+
+            <a href="actu.html">Actus</a>
+
+            <div class="faq-dropdown">
+
+                <a href="faq.html" class="faq-toggle">FAQ</a>
+
+                <div class="faq-dropdown-content">
+                    <a href="faq.html">Questions fréquentes</a>
+                    <a href="faq/contact.html">Contact</a>
+                    <a href="faq/ou-nous-trouver.html">Où nous trouver ?</a>
+                    <a href="faq/rejoindre-equipe.html">Rejoindre l'équipe</a>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="reservation-page">
+
+        
+
+        <section class="reservation-hero">
+
+            <span class="section-label">VOTRE MOMENT ZIR FOOD</span>
+
+            <h1>
+                RÉSERVEZ VOTRE
+                <span>TABLE !</span>
+            </h1>
+
+            <p>
+                Une envie de partager un bon moment autour de nos
+                spécialités ? Réservez votre table en quelques clics !
+            </p>
+
+        </section>
+
+
+        
+
+        <section class="reservation-container">
+
+            <div class="reservation-intro">
+
+                <span class="section-label">À VOUS DE JOUER</span>
+
+                <h2>VOTRE RÉSERVATION</h2>
+
+                <p>
+                    Complétez les informations ci-dessous pour préparer
+                    votre prochaine visite chez ZIR FOOD.
+                </p>
+
+                <div class="reservation-benefits">
+
+                    <div class="benefit">
+                        <span>🥙</span>
+                        <p>Des spécialités généreuses</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span>💚</span>
+                        <p>Un moment convivial</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span>🔥</span>
+                        <p>Une expérience gourmande</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="reservation-form" id="reservationForm">
+
+                <h2>Vos informations</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="firstName">Prénom *</label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Votre prénom"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="lastName">Nom *</label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Votre nom"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="email">Adresse e-mail *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemple@email.com"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="phone">Téléphone *</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="06 00 00 00 00"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <h2>Votre réservation</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="date">Date *</label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="time">Heure *</label>
+
+                        <select id="time" name="time" required>
+
+                            <option value="">Choisir une heure</option>
+                            <option value="11:30">11h30</option>
+                            <option value="12:00">12h00</option>
+                            <option value="12:30">12h30</option>
+                            <option value="13:00">13h00</option>
+                            <option value="13:30">13h30</option>
+                            <option value="18:30">18h30</option>
+                            <option value="19:00">19h00</option>
+                            <option value="19:30">19h30</option>
+                            <option value="20:00">20h00</option>
+                            <option value="20:30">20h30</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="guests">Nombre de personnes *</label>
+
+                        <select id="guests" name="guests" required>
+
+                            <option value="">Nombre de personnes</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="7">7 personnes</option>
+                            <option value="8">8 personnes</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="occasion">Occasion</label>
+
+                        <select id="occasion" name="occasion">
+
+                            <option value="">Choisir une occasion</option>
+                            <option value="Famille">Repas en famille</option>
+                            <option value="Amis">Repas entre amis</option>
+                            <option value="Anniversaire">Anniversaire</option>
+                            <option value="Autre">Autre</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Demandes particulières</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Une demande particulière ? Dites-nous tout..."
+                    ></textarea>
+
+                </div>
+
+
+                <p class="form-required">* Champs obligatoires</p>
+
+                <button type="submit" class="reservation-submit">
+                    CONFIRMER MA DEMANDE
+                </button>
+
+                <p
+                    id="reservationMessage"
+                    class="reservation-message"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+
+        
+
+        <section class="reservation-cta">
+
+            <h2>ON VOUS ATTEND CHEZ ZIR FOOD !</h2>
+
+            <p>
+                Préparez-vous à découvrir des saveurs généreuses.
+            </p>
+
+            <a href="menu.html">Découvrir notre menu</a>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <footer class="home-footer">
+
+        <div class="footer-logo">
+            ZIR <span>FOOD</span>
+        </div>
+
+        <p>Des saveurs généreuses, une expérience unique.</p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="faq.html">FAQ</a>
+            <a href="faq/contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 ZIR FOOD - Tous droits réservés.
+        </div>
+
+    </footer>
+
 </body>
 </html>
+
+    </nav>
+
+</header>

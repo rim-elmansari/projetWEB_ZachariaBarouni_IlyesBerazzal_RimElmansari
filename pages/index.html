@@ -1,22 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil | ZIR FOOD</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIR FOOD | Le goût du Liban</title>
+    <meta name="description" content="Découvrez ZIR FOOD, votre fast-food aux saveurs libanaises.">
+    <link rel="stylesheet" href="../css/style.css">
+
+
 </head>
 
-
 <body>
-  <header class="site-header"></header>
 
-  <main>
-    <h1>Accueil</h1>
-  </main>
+    <!-- NAVIGATION -->
+    <header class="home-header">
+            <a href="index.html" class="home-logo">
+               <img src="../images/logo-zir-food.png" alt="Logo ZIR FOOD">
+            </a>
 
-  <footer class="site-footer"></footer>
-  <script src="../js/calque.js"></script>
-  <script src="../js/script.js"></script>
+        <nav class="home-nav">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="actu.html">Actu</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- BANNIÈRE PRINCIPALE -->
+        <section class="home-hero">
+
+            <div class="hero-content">
+                <span class="hero-label">BIENVENUE CHEZ ZIR FOOD</span>
+
+                <h1>
+                    Le Liban<br>
+                    <span>dans votre assiette.</span>
+                </h1>
+
+                <p>
+                    Des saveurs authentiques, des recettes généreuses
+                    et une expérience gourmande à partager.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="pages/menu/index.html" class="btn-orange">
+                        Découvrir notre menu
+                    </a>
+
+                    <a href="#about" class="btn-outline">
+                        Notre univers
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="../images/shawarma.jpeg" alt="Spécialité libanaise, shawarma">
+                <div class="image-tag">
+                    <span>✦</span> SAVEURS DU LIBAN
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- BANDEAU -->
+        <section class="home-banner">
+            <span> FRAÎCHEUR </span>
+            <span> ✦ </span>
+            <span> GÉNÉROSITÉ </span>
+            <span> ✦ </span>
+            <span> AUTHENTICITÉ </span>
+            <span> ✦ </span>
+            <span> PLAISIR </span>
+        </section>
+
+
+        <!-- PRÉSENTATION -->
+        <section class="home-about" id="about">
+
+            <div class="about-image">
+                <img src="../images/emporté.jpeg" alt="Cuisine libanaise">
+            </div>
+
+            <div class="about-content">
+                <span class="section-label">NOTRE HISTOIRE</span>
+
+                <h2>Bien plus qu'un repas,<br>
+                    <span>un voyage au Liban.</span>
+                </h2>
+
+                <p>
+                    Chez ZIR FOOD, nous mettons à l'honneur
+                    la richesse de la cuisine libanaise.
+                    Des recettes savoureuses, des ingrédients
+                    soigneusement sélectionnés et une cuisine
+                    pleine de caractère.
+                </p>
+
+                <p>
+                    Notre envie ? Vous faire découvrir ou
+                    redécouvrir les saveurs du Liban à chaque bouchée.
+                </p>
+
+                <a href="pages/menu/index.html" class="btn-green">
+                    Explorer notre menu →
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- SPÉCIALITÉS -->
+        <section class="home-specialties" id="menu">
+
+            <div class="section-heading">
+                <span class="section-label">UNE EXPLOSION DE SAVEURS</span>
+                <h2>Nos incontournables</h2>
+                <p>Découvrez les spécialités qui font notre identité.</p>
+            </div>
+
+            <div class="specialty-grid">
+
+                <article class="specialty-card">
+                    <img src="../images/sandwich.jpeg" alt="Shawarma">
+                    <div class="specialty-info">
+                        <span>01</span>
+                        <h3>Nos Shawarmas</h3>
+                        <p>Une spécialité généreuse aux saveurs orientales.</p>
+                    </div>
+                </article>
+
+                <article class="specialty-card">
+                    <img src="../images/falafel.jpg" alt="Falafels">
+                    <div class="specialty-info">
+                        <span>02</span>
+                        <h3>Nos Falafels</h3>
+                        <p>Une spécialité incontournable de la cuisine libanaise.</p>
+                    </div>
+                </article>
+
+                <article class="specialty-card">
+                    <img src="../images/mezze.jpg" alt="Mezzés libanais">
+                    <div class="specialty-info">
+                        <span>03</span>
+                        <h3>Nos Mezzés</h3>
+                        <p>Des saveurs variées à partager et à savourer.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="specialty-action">
+                <a href="pages/menu/index.html" class="btn-orange">
+                    Voir toute la carte →
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- APPEL À L'ACTION -->
+        <section class="home-cta">
+            <span class="section-label">UNE ENVIE GOURMANDE ?</span>
+            <h2>Le goût du Liban<br>vous attend !</h2>
+            <p>Venez découvrir l'univers ZIR FOOD.</p>
+            <a href="pages/reservation/index.html" class="btn-light">
+                Nous retrouver
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+
+        <a href="index.html" class="footer-logo">
+            <span>ZIR</span> FOOD
+        </a>
+
+        <p>Le goût du Liban, à chaque bouchée.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="pages/menu/index.html">Menu</a>
+            <a href="pages/reservation/index.html">Réservation</a>
+            <a href="pages/faq/index.html">FAQ</a>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 ZIR FOOD — Tous droits réservés.
+        </div>
+
+    </footer>
+
+    <script src="js/calque.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

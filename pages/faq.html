@@ -1,20 +1,200 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ | ZIR FOOD</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | ZIR FOOD</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/faq.css">
 </head>
+
 <body>
-  <header class="site-header"></header>
 
-  <main>
-    <h1>FAQ</h1>
-  </main>
+<header class="home-header">
 
-  <footer class="site-footer"></footer>
-  <script src="../js/calque.js"></script>
-  <script src="../js/script.js"></script>
+    <a href="index.html" class="home-logo">
+        <img src="../images/logo-zir-food.png" alt="Logo ZIR FOOD">
+    </a>
+
+    <nav class="home-nav">
+        <a href="index.html">Accueil</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="actu.html">Actus</a>
+
+        <div class="faq-dropdown">
+            <a href="faq.html" class="faq-toggle active">FAQ ▾</a>
+
+            <div class="faq-dropdown-content">
+                <a href="faq.html">Questions fréquentes</a>
+                <a href="faq/contact.html">Contact</a>
+                <a href="faq/ou-nous-trouver.html">Où nous trouver ?</a>
+                <a href="faq/rejoindre-equipe.html">Rejoindre l'équipe</a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main class="faq-page">
+
+    <!-- HERO -->
+    <section class="faq-hero">
+
+        <span class="faq-tag">ZIR FOOD — À VOTRE SERVICE</span>
+
+        <h1>UNE QUESTION ? <span>ON VOUS RÉPOND !</span></h1>
+
+        <p>
+            Retrouvez toutes les informations utiles pour découvrir
+            ZIR FOOD et profiter pleinement de votre expérience.
+        </p>
+
+        <a href="#questions" class="faq-button">
+            Consulter les questions ↓
+        </a>
+
+    </section>
+
+    <!-- QUESTIONS FRÉQUENTES -->
+    <section class="faq-section" id="questions">
+
+        <div class="faq-heading">
+            <span>VOUS AVEZ DEMANDÉ...</span>
+            <h2>LES QUESTIONS <strong>FRÉQUENTES</strong></h2>
+            <p>Tout ce qu'il faut savoir avant de passer commande.</p>
+        </div>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary>Quels sont les horaires d'ouverture ?</summary>
+                <p>
+                    Nos horaires sont indiqués sur notre page de contact.
+                    N'hésitez pas à nous contacter pour connaître
+                    les disponibilités du jour.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Où se trouve ZIR FOOD ?</summary>
+                <p>
+                    Retrouvez notre adresse et les informations
+                    pour accéder au restaurant dans la rubrique
+                    « Où nous trouver ? ».
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Quels types de plats proposez-vous ?</summary>
+                <p>
+                    ZIR FOOD propose un univers street-food inspiré
+                    des saveurs du Moyen-Orient : shawarmas, falafels,
+                    mezzés et formules gourmandes.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Proposez-vous des options végétariennes ?</summary>
+                <p>
+                    Oui ! Retrouvez notamment nos falafels et
+                    différentes spécialités à base de légumes
+                    dans notre menu.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Peut-on commander à emporter ?</summary>
+                <p>
+                    Oui, consultez notre rubrique Réservation
+                    pour découvrir les modalités de commande.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Comment effectuer une réservation ?</summary>
+                <p>
+                    Rendez-vous sur notre page Réservation
+                    et remplissez le formulaire prévu à cet effet.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Comment contacter l'équipe ZIR FOOD ?</summary>
+                <p>
+                    Vous pouvez retrouver nos coordonnées
+                    dans la rubrique Contact.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+    <!-- AUTRES RUBRIQUES -->
+    <section class="faq-categories">
+
+        <div class="faq-heading">
+            <span>BESOIN D'AUTRE CHOSE ?</span>
+            <h2>EXPLOREZ NOS <strong>RUBRIQUES</strong></h2>
+        </div>
+
+        <div class="faq-cards">
+
+            <article class="faq-card">
+                <span class="faq-card-icon">✉</span>
+                <h3>NOUS CONTACTER</h3>
+                <p>Une question ou une demande particulière ? Écrivez-nous.</p>
+                <a href="faq/contact.html">Découvrir →</a>
+            </article>
+
+            <article class="faq-card">
+                <span class="faq-card-icon">📍</span>
+                <h3>NOUS TROUVER</h3>
+                <p>Retrouvez notre adresse et les informations pratiques.</p>
+                <a href="faq/ou-nous-trouver.html">Voir l'adresse →</a>
+            </article>
+
+            <article class="faq-card">
+                <span class="faq-card-icon">🤝</span>
+                <h3>REJOINDRE L'ÉQUIPE</h3>
+                <p>Envie de participer à l'aventure ZIR FOOD ?</p>
+                <a href="faq/rejoindre-equipe.html">Nous rejoindre →</a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- BANNIÈRE FINALE -->
+    <section class="faq-banner">
+
+        <div>
+            <span>UNE ENVIE GOURMANDE ?</span>
+            <h2>PRÊT À DÉCOUVRIR ZIR FOOD ?</h2>
+            <p>Explorez notre carte et laissez-vous tenter.</p>
+        </div>
+
+        <a href="menu.html">DÉCOUVRIR LE MENU ↗</a>
+
+    </section>
+
+</main>
+
+<footer class="home-footer">
+
+    <p>© 2026 ZIR FOOD — Tous droits réservés</p>
+
+    <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="actu.html">Actus</a>
+    </div>
+
+</footer>
+
 </body>
 </html>

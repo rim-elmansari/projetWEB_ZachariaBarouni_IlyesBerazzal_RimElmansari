@@ -1,0 +1,537 @@
+
+.contact-page {
+    padding: 35px 4%;
+    color: white;
+    overflow: hidden;
+}
+
+.contact-page * {
+    box-sizing: border-box;
+}
+
+.contact-page h1,
+.contact-page h2,
+.contact-page h3,
+.contact-page p {
+    color: white;
+}
+
+
+
+.contact-hero {
+    position: relative;
+    min-height: 370px;
+    margin: 25px 0 65px;
+    padding: 70px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background: linear-gradient(
+        120deg,
+        rgba(18,60,255,0.82),
+        rgba(170,190,220,0.30)
+    );
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.contact-hero::after {
+    content: "@";
+    position: absolute;
+    right: 2%;
+    bottom: -115px;
+    font-size: 320px;
+    font-weight: 1000;
+    color: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+
+.contact-tag {
+    position: relative;
+    z-index: 1;
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.contact-hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 25px 0;
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.1;
+    font-weight: 1000;
+}
+
+.contact-hero h1 span {
+    display: block;
+    color: var(--orange);
+}
+
+.contact-hero p {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.contact-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.contact-intro {
+    max-width: 800px;
+    margin: 65px auto 45px;
+    text-align: center;
+}
+
+.contact-intro > span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.contact-intro h2 {
+    margin: 18px 0;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 1000;
+}
+
+.contact-intro h2 strong {
+    color: var(--orange);
+}
+
+.contact-intro p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* =========================================
+   DISPOSITION PRINCIPALE
+========================================= */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 35px;
+    align-items: stretch;
+    margin: 55px 0 75px;
+}
+
+/* =========================================
+   COLONNE INFORMATIONS
+========================================= */
+
+.contact-info {
+    padding: 35px;
+    border-radius: 27px;
+    background: rgba(170,190,220,0.30);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+}
+
+.contact-number {
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 25px;
+    background: var(--orange);
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.contact-info h2 {
+    margin: 25px 0 18px;
+    font-size: clamp(28px, 3vw, 39px);
+    line-height: 1.15;
+    font-weight: 1000;
+}
+
+.contact-info h2 strong {
+    color: var(--yellow);
+}
+
+.contact-info > p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* CARTES INFORMATIONS */
+
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-top: 18px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateX(5px);
+    border-color: var(--yellow);
+    background: rgba(255,255,255,0.20);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: var(--orange);
+    font-size: 22px;
+}
+
+.green-icon {
+    background: var(--green);
+}
+
+.blue-icon {
+    background: var(--blue);
+}
+
+.contact-info-card h3 {
+    margin: 3px 0 7px;
+    font-size: 15px;
+    font-weight: 1000;
+}
+
+.contact-info-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contact-info-card a {
+    display: inline-block;
+    margin-top: 9px;
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.contact-info-card a:hover {
+    color: var(--orange);
+}
+
+/* =========================================
+   FORMULAIRE
+========================================= */
+
+.contact-form-box {
+    padding: 40px;
+    border-radius: 27px;
+    background: rgba(200,215,235,0.34);
+    border: 1px solid rgba(255,255,255,0.30);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.form-tag {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.contact-form-box h2 {
+    margin: 15px 0 8px;
+    font-size: 35px;
+    font-weight: 1000;
+}
+
+.contact-form-box > p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* LIGNES DU FORMULAIRE */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+/* CHAMPS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid rgba(255,255,255,0.30);
+    border-radius: 13px;
+    outline: none;
+    background: rgba(12,35,80,0.65);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255,255,255,0.65);
+}
+
+.form-group select option {
+    background: #102d59;
+    color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(255,230,138,0.17);
+    background: rgba(12,35,80,0.9);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 145px;
+}
+
+/* BOUTON ENVOYER */
+
+.contact-submit {
+    width: 100%;
+    padding: 17px 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 30px;
+    background: var(--yellow);
+    color: #172033;
+    font-size: 15px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-submit:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   BANNIÈRE FINALE
+========================================= */
+
+.contact-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 70px 0 35px;
+    padding: 55px 6%;
+    border-radius: 28px;
+    background: var(--blue);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-banner span {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.contact-banner h2 {
+    margin: 15px 0;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 1000;
+}
+
+.contact-banner p {
+    line-height: 1.7;
+}
+
+.contact-banner a {
+    display: inline-block;
+    padding: 16px 25px;
+    border-radius: 35px;
+    background: var(--yellow);
+    color: #172033;
+    font-weight: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-banner a:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   MENU FAQ AU PREMIER PLAN
+========================================= */
+
+.home-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.faq-dropdown {
+    position: relative;
+    z-index: 1001;
+}
+
+.faq-dropdown-content {
+    position: absolute;
+    z-index: 1002;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+    text-align: center;
+}
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 950px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 30px;
+    }
+
+    .contact-form-box {
+        padding: 30px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .contact-page {
+        padding: 20px 12px;
+    }
+
+    .contact-hero {
+        min-height: 320px;
+        margin: 15px 0 40px;
+        padding: 45px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .contact-hero p {
+        font-size: 15px;
+    }
+
+    .contact-intro {
+        margin: 45px auto 30px;
+    }
+
+    .contact-intro h2 {
+        font-size: 29px;
+    }
+
+    .contact-content {
+        margin: 35px 0 50px;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 23px 18px;
+        border-radius: 21px;
+    }
+
+    .contact-info h2 {
+        font-size: 29px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form-box h2 {
+        font-size: 29px;
+    }
+
+    .contact-banner {
+        margin: 45px 0 25px;
+        padding: 35px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-banner a {
+        width: 100%;
+        text-align: center;
+    }
+}
